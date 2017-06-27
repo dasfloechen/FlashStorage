@@ -19,6 +19,8 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+#if defined(__SAMD21G18A__)  || defined(__SAMD21E18A__) || defined(__SAMD21J18A__)
+
 #ifndef FLASH_AS_EEPROM_h
 #define FLASH_AS_EEPROM_h
 
@@ -81,5 +83,7 @@ class EEPROMClass {
 };
 
 extern EEPROMClass EEPROM;
+
+#endif
 
 #endif

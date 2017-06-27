@@ -17,6 +17,8 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+#if defined(__SAMD21G18A__)  || defined(__SAMD21E18A__) || defined(__SAMD21J18A__)
+
 #include "FlashStorage.h"
 
 static const uint32_t pageSizes[] = { 8, 16, 32, 64, 128, 256, 512, 1024 };
@@ -99,3 +101,4 @@ void FlashClass::read(const volatile void *flash_ptr, void *data, uint32_t size)
   memcpy(data, (const void *)flash_ptr, size);
 }
 
+#endif
